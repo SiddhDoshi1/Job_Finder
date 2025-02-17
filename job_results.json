@@ -1,0 +1,173 @@
+{
+    "count": 15,
+    "hits": [
+        {
+            "company_name": "Podtech IO",
+            "formatted_relative_time": "Just posted",
+            "id": "26d15523b840572e",
+            "link": "/job/26d15523b840572e?locality=in",
+            "locality": "in",
+            "location": "Gurugram, Haryana",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "SQL Database Administrator"
+        },
+        {
+            "company_name": "Virtusa",
+            "formatted_relative_time": "Just posted",
+            "id": "67b80fc1e52bcc37",
+            "link": "/job/67b80fc1e52bcc37?locality=in",
+            "locality": "in",
+            "location": "Pune, Maharashtra",
+            "pub_date_ts_milli": 1738735200000,
+            "salary": {},
+            "title": "Java FSD"
+        },
+        {
+            "company_name": "Optum",
+            "formatted_relative_time": "Just posted",
+            "id": "bab221575a64966e",
+            "link": "/job/bab221575a64966e?locality=in",
+            "locality": "in",
+            "location": "Gurugram, Haryana",
+            "pub_date_ts_milli": 1739080800000,
+            "salary": {},
+            "title": "Software Engineer - Java Fullstack Reactjs"
+        },
+        {
+            "company_name": "BlackRock Investments",
+            "formatted_relative_time": "Just posted",
+            "id": "e124ab42dd8b7893",
+            "link": "/job/e124ab42dd8b7893?locality=in",
+            "locality": "in",
+            "location": "Gurugram, Haryana",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Data Engineer (Java, Python, SQL, Linux), Aladdin Data, Vice President"
+        },
+        {
+            "company_name": "Concentrix",
+            "formatted_relative_time": "Just posted",
+            "id": "0e9036dc5619197f",
+            "link": "/job/0e9036dc5619197f?locality=in",
+            "locality": "in",
+            "location": "India",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Full stack - Java Spring Boot/Angular"
+        },
+        {
+            "company_name": "KPMG",
+            "formatted_relative_time": "Just posted",
+            "id": "652f7ec35f70346f",
+            "link": "/job/652f7ec35f70346f?locality=in",
+            "locality": "in",
+            "location": "Mumbai, Maharashtra",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Assistant Manager - Python"
+        },
+        {
+            "company_name": "Optum",
+            "formatted_relative_time": "Just posted",
+            "id": "4256f0cf417b2562",
+            "link": "/job/4256f0cf417b2562?locality=in",
+            "locality": "in",
+            "location": "Noida, Uttar Pradesh",
+            "pub_date_ts_milli": 1733810400000,
+            "salary": {},
+            "title": "Software Engineering Lead-Java"
+        },
+        {
+            "company_name": "PradeepIT Consulting Services",
+            "formatted_relative_time": "Just posted",
+            "id": "87d525ba77b14e0d",
+            "link": "/job/87d525ba77b14e0d?locality=in",
+            "locality": "in",
+            "location": "Hyderabad, Telangana",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Java Backend Developer"
+        },
+        {
+            "company_name": "Optum",
+            "formatted_relative_time": "Just posted",
+            "id": "f27cad9989aa77ee",
+            "link": "/job/f27cad9989aa77ee?locality=in",
+            "locality": "in",
+            "location": "Hyderabad, Telangana",
+            "pub_date_ts_milli": 1737871200000,
+            "salary": {},
+            "title": "Manager Data Scientist - Machine Learning, AI, Python"
+        },
+        {
+            "company_name": "Adobe",
+            "formatted_relative_time": "Just posted",
+            "id": "ecbdc9c2e260ecb6",
+            "link": "/job/ecbdc9c2e260ecb6?locality=in",
+            "locality": "in",
+            "location": "Bengaluru, Karnataka",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Software Development Engineer 2 - C++"
+        },
+        {
+            "company_name": "BlackRock Investments",
+            "formatted_relative_time": "Just posted",
+            "id": "39d306f195909a2b",
+            "link": "/job/39d306f195909a2b?locality=in",
+            "locality": "in",
+            "location": "Gurugram, Haryana",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Associate, Software Engineer"
+        },
+        {
+            "company_name": "Virtusa",
+            "formatted_relative_time": "Just posted",
+            "id": "46e6b47eb0935981",
+            "link": "/job/46e6b47eb0935981?locality=in",
+            "locality": "in",
+            "location": "Andhra Pradesh",
+            "pub_date_ts_milli": 1738908000000,
+            "salary": {},
+            "title": "Java Developer"
+        },
+        {
+            "company_name": "Ericsson",
+            "formatted_relative_time": "Just posted",
+            "id": "b2b17ad3c1244477",
+            "link": "/job/b2b17ad3c1244477?locality=in",
+            "locality": "in",
+            "location": "Noida, Uttar Pradesh",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Java Architect - 7+ Yrs exp"
+        },
+        {
+            "company_name": "Virtusa",
+            "formatted_relative_time": "Just posted",
+            "id": "739c11012e7c4ac6",
+            "link": "/job/739c11012e7c4ac6?locality=in",
+            "locality": "in",
+            "location": "Chennai, Tamil Nadu",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Python AI"
+        },
+        {
+            "company_name": "Capgemini",
+            "formatted_relative_time": "Just posted",
+            "id": "bc2cc3bb64455f67",
+            "link": "/job/bc2cc3bb64455f67?locality=in",
+            "locality": "in",
+            "location": "Pune, Maharashtra",
+            "pub_date_ts_milli": 1739167200000,
+            "salary": {},
+            "title": "Java II 4-6 yrs II Pune"
+        }
+    ],
+    "indeed_final_url": "https://in.indeed.com/jobs?q=C%2B%2B%2CPython%2CJava%2CJavaScript%2CHTML%2CCSS%2CReactJS%2CNodeJS%2CExpressJS%2CSQL%2CPostgreSQL%2CSpring%2CRestful+API&l=&sort=date",
+    "next_page_id": 2,
+    "suggest_locality": null
+}
