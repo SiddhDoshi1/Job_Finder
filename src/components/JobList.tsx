@@ -1,11 +1,33 @@
 import React from 'react';
-import { MapPin, Building, Clock, BookmarkPlus } from 'lucide-react';
+import { MapPin, Building, Clock } from 'lucide-react';
+
+// Mock job results data (replace this with your actual import or fetch logic)
+const jobResults = {
+  count: 15,
+  hits: [
+    {
+      company_name: "Podtech IO",
+      formatted_relative_time: "Just posted",
+      id: "26d15523b840572e",
+      link: "/job/26d15523b840572e?locality=in",
+      locality: "in",
+      location: "Gurugram, Haryana",
+      pub_date_ts_milli: 1739167200000,
+      salary: {},
+      title: "SQL Database Administrator"
+    },
+  ],
+  indeed_final_url: "https://in.indeed.com" // Use the base domain here
+};
 
 interface JobListProps {
   jobList: any[];
 }
 
 const JobList: React.FC<JobListProps> = ({ jobList }) => {
+  // Use the base domain from jobResults.indeed_final_url
+  const baseUrl = jobResults.indeed_final_url;
+
   return (
     <div className="space-y-6">
       {Array.isArray(jobList) && jobList.length > 0 ? (
@@ -33,10 +55,14 @@ const JobList: React.FC<JobListProps> = ({ jobList }) => {
                 {job.formatted_relative_time}
               </span>
             </div>
-            
+
             {/* Apply Button */}
             <div className="mt-4 flex justify-end">
-              <a href={job.link} target="_blank" rel="noopener noreferrer">
+              <a
+                href={`${baseUrl}${job.link}`} // Combine baseUrl with the relative job link
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <button className="px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
                   Apply Now
                 </button>
