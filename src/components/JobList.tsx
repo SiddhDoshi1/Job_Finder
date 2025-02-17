@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { MapPin, Building, Clock } from 'lucide-react';
 
 const jobResults = {
@@ -6,16 +6,35 @@ const jobResults = {
 };
 
 interface JobListProps {
-  jobList: any[];
+  jobList: any[]; // New data sent from dashboard.tsx
 }
 
 const JobList: React.FC<JobListProps> = ({ jobList }) => {
   const baseUrl = jobResults.indeed_final_url;
 
+  // State to hold the job data
+  const [jobs, setJobs] = useState<any[]>([]);
+
+  // Effect to initialize jobs from localStorage on mount
+  useEffect(() => {
+    const savedJobs = localStorage.getItem('jobs');
+    if (savedJobs) {
+      setJobs(JSON.parse(savedJobs));
+    }
+  }, []);
+
+  // Effect to update jobs and localStorage when new data is sent from dashboard.tsx
+  useEffect(() => {
+    if (jobList && jobList.length > 0) {
+      setJobs(jobList);
+      localStorage.setItem('jobs', JSON.stringify(jobList));
+    }
+  }, [jobList]);
+
   return (
     <div className="space-y-6">
-      {Array.isArray(jobList) && jobList.length > 0 ? (
-        jobList.map((job) => (
+      {Array.isArray(jobs) && jobs.length > 0 ? (
+        jobs.map((job) => (
           <div key={job.id} className="bg-white rounded-lg shadow p-6">
             <div className="flex justify-between items-start">
               <div>
