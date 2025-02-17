@@ -1,23 +1,8 @@
 import React from 'react';
 import { MapPin, Building, Clock } from 'lucide-react';
 
-// Mock job results data (replace this with your actual import or fetch logic)
 const jobResults = {
-  count: 15,
-  hits: [
-    {
-      company_name: "Podtech IO",
-      formatted_relative_time: "Just posted",
-      id: "26d15523b840572e",
-      link: "/job/26d15523b840572e?locality=in",
-      locality: "in",
-      location: "Gurugram, Haryana",
-      pub_date_ts_milli: 1739167200000,
-      salary: {},
-      title: "SQL Database Administrator"
-    },
-  ],
-  indeed_final_url: "https://in.indeed.com" // Use the base domain here
+  indeed_final_url: "https://www.indeed.com/viewjob?jk=" // Use the base domain here
 };
 
 interface JobListProps {
@@ -25,7 +10,6 @@ interface JobListProps {
 }
 
 const JobList: React.FC<JobListProps> = ({ jobList }) => {
-  // Use the base domain from jobResults.indeed_final_url
   const baseUrl = jobResults.indeed_final_url;
 
   return (
@@ -59,7 +43,7 @@ const JobList: React.FC<JobListProps> = ({ jobList }) => {
             {/* Apply Button */}
             <div className="mt-4 flex justify-end">
               <a
-                href={`${baseUrl}${job.link}`} // Combine baseUrl with the relative job link
+                href={`${baseUrl}${job.id}`} // Combine baseUrl with the relative job link
                 target="_blank"
                 rel="noopener noreferrer"
               >

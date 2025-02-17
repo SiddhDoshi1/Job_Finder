@@ -10,12 +10,10 @@ import ollama
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
-# Load environment variables from .env file
 load_dotenv()
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
-# Apify API key (assuming it's used for job search)
-APIFY_API_KEY = os.getenv('apify_api_mgE1eFtWesMNMBSceuWg3BB2syXdB327arwV')
+RAPID_API_KEY = os.getenv('RAPID_API_KEY')
 
 # Function to extract text from a PDF resume
 def extract_text_from_resume(file_path):
@@ -23,7 +21,7 @@ def extract_text_from_resume(file_path):
         reader = PdfReader(file_path)
         text = ""
         for page in reader.pages:
-            page_text = page.extract_text() or ""  # Handle None case
+            page_text = page.extract_text() or ""
             text += page_text
         
         return text.strip()
@@ -62,24 +60,24 @@ Text:
         print(f"Error extracting skills with Ollama: {e}")
         return []
 
-# Function to fetch job openings (alternative to Indeed API)
+# Function to fetch job openings
 def extract_job(skills):
     query = urllib.parse.quote(",".join(skills))
     conn = http.client.HTTPSConnection("indeed12.p.rapidapi.com")
     headers = {
-        'x-rapidapi-key': "42276b4153msh7e147f8b9ac6b8cp117c72jsnb7f290d31904",
+        'x-rapidapi-key': RAPID_API_KEY,
         'x-rapidapi-host': "indeed12.p.rapidapi.com"
     }
     conn.request("GET", f"/jobs/search?query={query}&locality=in&sort=date", headers=headers)
     res = conn.getresponse()
     data = res.read()
     data=data.decode("utf-8")
-    return data
-    print(data)
-    with open("job_results.json", "w", encoding="utf-8") as file:
-        file.write(data)
-    # print(data.decode("utf-8"))
-
+    try:
+        return json.loads(data) 
+    except json.JSONDecodeError:
+        print("Error decoding job data")
+        return {"error": "Failed to fetch job data"}
+    
 # Main function
 @app.route('/upload', methods=['POST'])
 def main():
@@ -95,9 +93,9 @@ def main():
         return jsonify({'error': 'Failed to extract text from resume.'}), 500
 
     # Step 2: Extract skills using Ollama
-    # skills = extract_skills_with_ollama(resume_text)
+    skills = extract_skills_with_ollama(resume_text)
     # print("Extracted Skills:", skills)
-    skills=["CPP"]
+    # skills=["CPP"]
 
     if not skills:
         print("No skills extracted. Exiting.")
@@ -111,13 +109,13 @@ def main():
     
     skills_list = re.findall(r'[\w#+]+(?:\s[\w#+]+)*', skills)
     
-    # job_list=extract_job(skills_list)
+    job_list=extract_job(skills_list)
 
     # job_list
-    with open("job_results.json", "r", encoding="utf-8") as file:
-        job_list = json.load(file)
+    # with open("job_results.json", "r", encoding="utf-8") as file:
+    #     job_list = json.load(file)
     
-    # print(job_list)
+    # print(type(job_list))
     return jsonify({'skills': skills_list,'job_list': job_list}), 200
     # print(skills_dict)
     # Step 3: Fetch job openings using Apify

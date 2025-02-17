@@ -36,6 +36,7 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ onJobListUpdate }) => {
         const data = await response.json();
         if (response.ok) {
           setSkills(data.skills);
+          console.log(data.job_list)
           const jobListArray = data.job_list.hits;
           onJobListUpdate(jobListArray); // ✅ Pass job list without modification
         } else {
