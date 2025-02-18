@@ -12,7 +12,7 @@ from flask_cors import CORS
 
 load_dotenv()
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "https://ai-job-finder.netlify.app"}})
+CORS(app)
 RAPID_API_KEY = os.getenv('RAPID_API_KEY')
 
 # Function to extract text from a PDF resume
