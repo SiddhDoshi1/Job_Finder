@@ -126,7 +126,7 @@ const Dashboard: React.FC = () => {
                   <Upload className="h-5 w-5 mr-3" />
                   Resume Upload
                 </button>
-                <button
+                {/* <button
                   onClick={() => setActiveTab('saved')}
                   className={`w-full flex items-center px-4 py-3 text-sm font-medium ${
                     activeTab === 'saved'
@@ -136,14 +136,13 @@ const Dashboard: React.FC = () => {
                 >
                   <BookmarkCheck className="h-5 w-5 mr-3" />
                   Saved Jobs
-                </button>
+                </button> */}
               </nav>
             </div>
           </div>
 
           <div className="col-span-12 lg:col-span-9">
             {activeTab === 'jobs' && <JobList jobList={jobList} />} {/* Pass job list to JobList */}
-            {/* {activeTab === 'saved' && <SavedJobs />} */}
             {activeTab === 'resume' && <ResumeUpload onJobListUpdate={handleJobListUpdate} />}
 
           </div>
