@@ -28,7 +28,7 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ onJobListUpdate }) => {
       formData.append('resume', files[0]);
   
       try {
-        const response = await fetch('https://job-finder-delta-mocha.vercel.app/', {
+        const response = await fetch('https://job-finder-delta-mocha.vercel.app/upload', {
           method: 'POST',
           body: formData,
         });
