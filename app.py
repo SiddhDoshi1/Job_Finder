@@ -86,6 +86,7 @@ def main():
     # Path to the resume file
 
     file = request.files['resume']
+
     # Step 1: Extract text from resume
     resume_text = extract_text_from_resume(file)
     if not resume_text:
@@ -94,8 +95,6 @@ def main():
 
     # Step 2: Extract skills using Ollama
     skills = extract_skills_with_ollama(resume_text)
-    # print("Extracted Skills:", skills)
-    # skills=["CPP"]
 
     if not skills:
         print("No skills extracted. Exiting.")
@@ -110,20 +109,9 @@ def main():
     skills_list = re.findall(r'[\w#+]+(?:\s[\w#+]+)*', skills)
     
     job_list=extract_job(skills_list)
-
-    # job_list
-    # with open("job_results.json", "r", encoding="utf-8") as file:
-    #     job_list = json.load(file)
     
-    # print(type(job_list))
     return jsonify({'skills': skills_list,'job_list': job_list}), 200
-    # print(skills_dict)
-    # Step 3: Fetch job openings using Apify
-    # jobs = fetch_jobs_with_apify(skills)
-    # if jobs:
-    #     print("Job Listings:", jobs)
-    # else:
-    #     print("Failed to fetch job listings.")
+    
 
     
 

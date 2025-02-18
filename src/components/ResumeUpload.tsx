@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Upload, FileText, CheckCircle, XCircle } from 'lucide-react';
 
 interface ResumeUploadProps {
-  onJobListUpdate: (jobs: any[]) => void; // Add this prop
+  onJobListUpdate: (jobs: any[]) => void;
 }
 
 const ResumeUpload: React.FC<ResumeUploadProps> = ({ onJobListUpdate }) => {
@@ -36,9 +36,9 @@ const ResumeUpload: React.FC<ResumeUploadProps> = ({ onJobListUpdate }) => {
         const data = await response.json();
         if (response.ok) {
           setSkills(data.skills);
-          console.log(data.job_list)
+          // console.log(data.job_list)
           const jobListArray = data.job_list.hits;
-          onJobListUpdate(jobListArray); // ✅ Pass job list without modification
+          onJobListUpdate(jobListArray);
         } else {
           setError(data.error || 'Failed to extract skills');
         }
