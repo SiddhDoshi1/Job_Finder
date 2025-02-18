@@ -143,7 +143,7 @@ const Dashboard: React.FC = () => {
 
           <div className="col-span-12 lg:col-span-9">
             {activeTab === 'jobs' && <JobList jobList={jobList} />} {/* Pass job list to JobList */}
-            {activeTab === 'saved' && <SavedJobs />}
+            {/* {activeTab === 'saved' && <SavedJobs />} */}
             {activeTab === 'resume' && <ResumeUpload onJobListUpdate={handleJobListUpdate} />}
 
           </div>
