@@ -24,7 +24,7 @@ JobFinder is an AI-driven tool that analyzes resumes and matches them with relev
 
 Python 3.8+
 
-API keys: Gemini API, Indeed API
+API keys: Gemini API, Rapid API
 
 ## Steps
 1. Clone the repo:
