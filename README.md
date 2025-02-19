@@ -28,21 +28,22 @@ API keys: Gemini API, Indeed API
 
 ## Steps
 1. Clone the repo:
-   git clone https://github.com/ShahHetanshi/JobFinder.git
+   git clone https://github.com/ShahHetanshi/Job_Finder.git
+   git clone https://github.com/SiddhDoshi/Job_Finder.git
    cd JobFinder
 
-2. Create a virtual environment:
+3. Create a virtual environment:
    python -m venv venv  
    source venv/bin/activate
 
-3. Install dependencies:
+4. Install dependencies:
    pip install -r requirements.txt
 
-4. Set up API keys in a .env file:
+5. Set up API keys in a .env file:
    GEMINI_API_KEY=your_gemini_key  
    RAPID_API_KEY=your_rapid_key  
 
-5. Run the application:
+6. Run the application:
    npm run dev
    python app.py
 
