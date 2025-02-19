@@ -1,6 +1,6 @@
 Flask
 flask-cors
-requests
 PyPDF2
 python-dotenv
-ollama
+google-generativeai
+requests
