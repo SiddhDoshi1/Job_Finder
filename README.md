@@ -54,6 +54,6 @@ API keys: Gemini API, Rapid API for Indeed
 
 ## 📝 License
 
-MIT License. See LICENSE for details.
+MIT License. See [LICENSE](https://github.com/SiddhDoshi1/Job_Finder/blob/main/LICENSE) for details.
 
 ## Made with ❤️ by me and Hetanshi Shah.
