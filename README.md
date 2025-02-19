@@ -43,6 +43,8 @@ API keys: Gemini API, Rapid API for Indeed
    `npm run dev`
    `python app.py`
 
+
+```not markdown
 ## 🔧 Usage
 
 **Upload your resume** (PDF format).
