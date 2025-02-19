@@ -32,16 +32,13 @@ API keys: Gemini API, Rapid API for Indeed
    `git clone https://github.com/SiddhDoshi1/Job_Finder.git`  
    `cd JobFinder`
 
-```markdown
 2. Install dependencies:
    `pip install -r requirements.txt`
 
-```markdown
 3. Set up API keys in a .env file:
    `GEMINI_API_KEY=your_gemini_key `
    `RAPID_API_KEY=your_rapid_key ` 
 
-```markdown
 4. Run the application:
    `npm run dev`
    `python app.py`
