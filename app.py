@@ -109,7 +109,7 @@ def main():
     skills_list = re.findall(r'[\w#+]+(?:\s[\w#+]+)*', skills)
     
     job_list=extract_job(skills_list)
-    print(job_list)
+    # print(job_list)
     return jsonify({'skills': skills_list,'job_list': job_list}), 200
     
 
