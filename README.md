@@ -59,4 +59,4 @@ API keys: Gemini API, Indeed API
 
 MIT License. See LICENSE for details.
 
-## Made with ❤️ by me and Siddh Doshi.
+## Made with ❤️ by me and Hetanshi Shah.
