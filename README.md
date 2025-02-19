@@ -49,7 +49,7 @@ API keys: Gemini API, Indeed API
 
 ## 🔧 Usage
 
-**Upload your resume** (PDF/DOCX format).
+**Upload your resume** (PDF format).
 
 **Get job recommendations** based on your skills and experience.
 
