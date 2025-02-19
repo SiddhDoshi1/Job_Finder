@@ -27,7 +27,7 @@ Python 3.8+
 API keys: Gemini API, Rapid API for Indeed 
 
 ## Steps
-```markdown
+
 1. Clone the repo:  
    `git clone https://github.com/SiddhDoshi1/Job_Finder.git`  
    `cd JobFinder`
