@@ -28,7 +28,7 @@ API keys: Gemini API, Indeed API
 
 ## Steps
 1. Clone the repo:
-   git clone https://github.com/SiddhDoshi/Job_Finder.git
+   git clone https://github.com/SiddhDoshi1/Job_Finder.git
    cd JobFinder
 
 3. Create a virtual environment:
