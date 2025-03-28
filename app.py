@@ -36,7 +36,7 @@ def extract_text_from_resume(file_path):
 # Function to extract skills using Gemini model
 def extract_skills_with_gemini(text):
     try:
-        model = genai.GenerativeModel('gemini-pro')
+        model = genai.GenerativeModel("gemini-1.5-pro-002")
         response = model.generate_content(f"""
 Extract only the skills from the given text and return them strictly in this exact format:  
 [skill1, skill2, skill3, ...]  
